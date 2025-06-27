@@ -7,10 +7,10 @@
         <groupId>org.example</groupId>
         <artifactId>neuefische_exercises</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../../pom.xml</relativePath>
+        <relativePath>../../../../pom.xml</relativePath>
     </parent>
 
-    <artifactId>250626_exercises_array</artifactId>
+    <artifactId>250627_bonus_novice</artifactId>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>

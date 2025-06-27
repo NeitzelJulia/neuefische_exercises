@@ -9,10 +9,10 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
-        <module>modules/250625_if_and_methods</module>
-        <module>modules/250626_exercises_array</module>
-        <module>modules/250627_maven</module>
-        <module>modules/250627_bonus_novice</module>
+        <module>modules/01_java_basics/250625_conditions_and_methods</module>
+        <module>modules/01_java_basics/250626_arrays</module>
+        <module>modules/01_java_basics/250627_maven</module>
+        <module>modules/bonus/java_basics/novice</module>
     </modules>
 
     <properties>

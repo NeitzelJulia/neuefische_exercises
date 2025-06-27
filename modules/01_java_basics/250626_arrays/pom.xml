@@ -7,10 +7,10 @@
         <groupId>org.example</groupId>
         <artifactId>neuefische_exercises</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../../pom.xml</relativePath>
+        <relativePath>../../../pom.xml</relativePath>
     </parent>
 
-    <artifactId>250625_if_and_methods</artifactId>
+    <artifactId>250626_arrays</artifactId>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
