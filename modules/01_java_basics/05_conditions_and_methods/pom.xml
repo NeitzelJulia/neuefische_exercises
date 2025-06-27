@@ -10,7 +10,7 @@
         <relativePath>../../../pom.xml</relativePath>
     </parent>
 
-    <artifactId>250625_conditions_and_methods</artifactId>
+    <artifactId>05_conditions_and_methods</artifactId>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
