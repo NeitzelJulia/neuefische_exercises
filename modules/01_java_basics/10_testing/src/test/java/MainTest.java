@@ -27,6 +27,22 @@ class MainTest {
         assertEquals(-6, Main.multiply(-2, 3));
     }
 
+    // Tests für isEven(int)
+    @Test
+    void testIsEvenWithEvenNumber() {
+        assertTrue(Main.isEven(4));
+    }
+
+    @Test
+    void testIsEvenWithOddNumber() {
+        assertFalse(Main.isEven(5));
+    }
+
+    @Test
+    void testIsEvenWithZero() {
+        assertTrue(Main.isEven(0));
+    }
+
     // Tests für multiply(int, int)
     @Test
     void testMultiplyPositiveNumbers() {
