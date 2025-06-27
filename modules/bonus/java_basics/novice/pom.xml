@@ -10,7 +10,7 @@
         <relativePath>../../../../pom.xml</relativePath>
     </parent>
 
-    <artifactId>250627_bonus_novice</artifactId>
+    <artifactId>novice</artifactId>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
