@@ -15,26 +15,26 @@ class PlayerCharacterTest {
     }
 
     @Test
-    void testMoveW() {
+    void testMoveW_fromStartPosition() {
         int[] expected = {0,1};
         assertArrayEquals(expected, PlayerCharacter.moveW());
     }
 
     @Test
-    void testMoveS() {
+    void testMoveS_fromStartPosition() {
         int[] expected = {0,-1};
         assertArrayEquals(expected, PlayerCharacter.moveS());
     }
 
 
     @Test
-    void testMoveD() {
+    void testMoveD_fromStartPosition() {
         int[] expected = {1,0};
         assertArrayEquals(expected, PlayerCharacter.moveD());
     }
 
     @Test
-    void testMoveA() {
+    void testMoveA_fromStartPosition() {
         int[] expected = {-1,0};
         assertArrayEquals(expected, PlayerCharacter.moveA());
     }
