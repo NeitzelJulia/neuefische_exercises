@@ -1,26 +1,33 @@
 public class PlayerCharacter {
 
+    public static int x = 0;
+    public static int y = 0;
+
     public static int getX(){
-        return 0;
+        return x;
     }
 
     public static int getY(){
-        return 0;
+        return y;
     }
 
     public static int[] moveW(){
-        return new int[] {0,1};
+        y += 1;
+        return new int[] {getX(), getY()};
     }
 
     public static int[] moveS(){
-        return new int[] {0,-1};
+        y -= 1;
+        return new int[] {getX(), getY()};
     }
 
     public static int[] moveD(){
-        return new int[] {1,0};
+        x += 1;
+        return new int[] {getX(), getY()};
     }
 
     public static int[] moveA(){
-        return new int[] {-1,0};
+        x -= 1;
+        return new int[] {getX(), getY()};
     }
 }
