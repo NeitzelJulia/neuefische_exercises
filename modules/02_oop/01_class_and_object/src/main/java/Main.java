@@ -4,7 +4,7 @@ public class Main {
         car.startEngine();
 
         Car car2 = new Car("Nissan", "Micra", "white", 2016);
-        car.startEngine();
+        car2.startEngine();
         car2.accelerate(10);
     }
 }
