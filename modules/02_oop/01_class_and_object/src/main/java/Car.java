@@ -1,9 +1,9 @@
 public class Car {
 
-    private String brand;
-    private String model;
-    private String color;
-    private int yearOfManufacture;
+    private final String brand;
+    private final String model;
+    private final String color;
+    private final int yearOfManufacture;
     private int speed;
     private boolean engineIsRunning;
 
