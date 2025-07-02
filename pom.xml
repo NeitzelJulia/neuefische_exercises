@@ -17,6 +17,7 @@
         <module>modules/bonus/java_basics/intermediate</module>
         <module>modules/bonus/java_basics/expert</module>
         <module>modules/01_java_basics/11_TDD</module>
+        <module>modules/02_oop/01_class_and_object</module>
     </modules>
 
     <properties>
