@@ -19,6 +19,7 @@
         <module>modules/01_java_basics/11_TDD</module>
         <module>modules/02_oop/01_class_and_object</module>
         <module>modules/02_oop/03_inheritance</module>
+        <module>modules/02_oop/04_static</module>
     </modules>
 
     <properties>
