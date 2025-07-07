@@ -21,6 +21,7 @@
         <module>modules/02_oop/03_inheritance</module>
         <module>modules/02_oop/04_static</module>
         <module>modules/02_oop/05_interface</module>
+        <module>modules/02_oop/06_list</module>
     </modules>
 
     <properties>
