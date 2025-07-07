@@ -22,6 +22,7 @@
         <module>modules/02_oop/04_static</module>
         <module>modules/02_oop/05_interface</module>
         <module>modules/02_oop/06_list</module>
+        <module>modules/02_oop/07_set_map</module>
     </modules>
 
     <properties>
