@@ -23,6 +23,7 @@
         <module>modules/02_oop/05_interface</module>
         <module>modules/02_oop/06_list</module>
         <module>modules/02_oop/07_set_map</module>
+        <module>modules/02_oop/09_record</module>
     </modules>
 
     <properties>
