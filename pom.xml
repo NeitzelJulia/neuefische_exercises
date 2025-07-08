@@ -24,6 +24,7 @@
         <module>modules/02_oop/06_list</module>
         <module>modules/02_oop/07_set_map</module>
         <module>modules/02_oop/09_record</module>
+        <module>modules/02_oop/10_big_decimal</module>
     </modules>
 
     <properties>
