@@ -1,4 +1,6 @@
 import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -34,6 +36,42 @@ public class BankService {
 
         fromAcc.withdraw(amount);
         toAcc.deposit(amount);
+    }
+
+    public List<String> split(String accountNumber) {
+        Account account = accounts.get(accountNumber);
+        if (account == null) {
+            throw new IllegalArgumentException("invalid account no");
+        }
+
+        List<Client> clients = account.getClients();
+
+        int count = clients.size();
+        if (count < 2) {
+            throw new IllegalArgumentException("invalid number of clients");
+        }
+
+        BigDecimal total = account.getBalance().setScale(2, RoundingMode.DOWN);
+        BigDecimal basis = total.divide(BigDecimal.valueOf(count), 2,  RoundingMode.DOWN);
+        BigDecimal remaining = total.subtract(basis.multiply(BigDecimal.valueOf(count)));
+
+        List<String> newAccounts = new ArrayList<>();
+        BigDecimal oneCent = BigDecimal.valueOf(1, 2);
+
+        for (Client client : clients) {
+            String newAccountNo = openAccount(client);
+            BigDecimal amount = basis;
+            if (remaining.compareTo(BigDecimal.ZERO) > 0) {
+                amount = amount.add(oneCent);
+                remaining = remaining.subtract(oneCent);
+            }
+            accounts.get(newAccountNo).deposit(amount);
+            newAccounts.add(newAccountNo);
+        }
+
+        accounts.remove(accountNumber);
+
+        return newAccounts;
     }
 
 }
