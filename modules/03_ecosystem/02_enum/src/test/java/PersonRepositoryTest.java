@@ -2,6 +2,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -30,9 +31,10 @@ class PersonRepositoryTest {
 
     @Test
     void testFindById_exists() {
-        Person p = repo.findById("02");
-        assertNotNull(p, "Person mit ID 02 sollte gefunden werden");
-        assertEquals("Bob", p.name());
+        Optional<Person> opt = repo.findById("02");
+        assertTrue(opt.isPresent(), "Person mit ID 02 sollte vorhanden sein");
+        Person person = opt.get();
+        assertEquals("Bob", person.name());
     }
 
     @Test

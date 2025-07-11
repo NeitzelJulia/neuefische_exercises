@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class PersonRepository {
@@ -16,8 +13,8 @@ public class PersonRepository {
         return new ArrayList<>(persons.values());
     }
 
-    public Person findById(String id) {
-        return persons.get(id);
+    public Optional<Person> findById(String id) {
+        return Optional.ofNullable(persons.get(id));
     }
 
     public boolean deleteById(String id) {
