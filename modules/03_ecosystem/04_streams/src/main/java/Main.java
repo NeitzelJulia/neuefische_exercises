@@ -24,10 +24,13 @@ public class Main {
         System.out.println("Summe aller verarbeiteten Zahlen: " + sum);
         System.out.println();
 
+
+
+        //Bonus
         String resourceName = "students.csv";
         URL res = Main.class.getClassLoader().getResource(resourceName);
         if (res == null) {
-            throw new IllegalArgumentException(resourceName + " nicht gefunden im Ressourcen-Ordner!");
+            throw new IllegalArgumentException(resourceName + " not found!");
         }
         Path csvPath = Paths.get(res.toURI());
 
