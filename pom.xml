@@ -26,6 +26,7 @@
         <module>modules/02_oop/09_record</module>
         <module>modules/02_oop/10_big_decimal</module>
         <module>modules/03_ecosystem/02_enum</module>
+        <module>modules/03_ecosystem/04_streams</module>
     </modules>
 
     <properties>
