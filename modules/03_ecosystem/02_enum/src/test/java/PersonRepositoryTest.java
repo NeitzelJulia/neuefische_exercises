@@ -38,15 +38,19 @@ class PersonRepositoryTest {
     }
 
     @Test
-    void testFindById_notExists() {
-        assertNull(repo.findById("99"), "Nicht existierende ID sollte null zurückliefern");
+    void testFindByIdOptional_notExists() {
+        Optional<Person> opt = repo.findById("99");
+        assertFalse(opt.isPresent(), "Nicht existierende ID sollte Optional.empty() zurückliefern");
     }
 
     @Test
     void testDeleteById_success() {
         boolean deleted = repo.deleteById("02");
         assertTrue(deleted, "Löschen einer existierenden ID muss true liefern");
-        assertNull(repo.findById("02"), "Nach dem Löschen darf die Person nicht mehr gefunden werden");
+
+        Optional<Person> opt = repo.findById("02");
+        assertFalse(opt.isPresent(), "Nach dem Löschen darf die Person nicht mehr gefunden werden");
+
         assertEquals(2, repo.findAll().size(), "Anzahl der Personen muss um 1 kleiner sein");
     }
 
