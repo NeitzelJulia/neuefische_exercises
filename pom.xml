@@ -27,7 +27,7 @@
         <module>modules/02_oop/10_big_decimal</module>
         <module>modules/03_ecosystem/02_enum</module>
         <module>modules/03_ecosystem/04_streams</module>
-        <module>modules/03_ecosystem/06_lombok/01_lombok_data</module>
+        <module>modules/03_ecosystem/06_lombok</module>
     </modules>
 
     <properties>
