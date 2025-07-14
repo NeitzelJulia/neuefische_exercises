@@ -2,6 +2,7 @@ import lombok.*;
 
 @Data
 @AllArgsConstructor
+@Builder
 public class Student {
 
     private String id;
