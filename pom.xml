@@ -27,6 +27,7 @@
         <module>modules/02_oop/10_big_decimal</module>
         <module>modules/03_ecosystem/02_enum</module>
         <module>modules/03_ecosystem/04_streams</module>
+        <module>modules/03_ecosystem/06_lombok/01_lombok_data</module>
     </modules>
 
     <properties>
@@ -41,6 +42,12 @@
             <artifactId>junit-jupiter</artifactId>
             <version>5.13.2</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.30</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
