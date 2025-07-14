@@ -1,10 +1,10 @@
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
+import lombok.Value;
 
 import java.util.List;
 
-@Data
+@Value
 @AllArgsConstructor
 @Builder
 public class Course {
@@ -12,6 +12,6 @@ public class Course {
     private String id;
     private String name;
     private Teacher teacher;
-    private List<Student> students;
+    private List<Enrollment> enrollments;
 
 }

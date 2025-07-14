@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.Set;
 
 public class Main {
 
@@ -25,26 +26,51 @@ public class Main {
                 "C001",
                 "Analysis I",
                 mathTeacher,
-                List.of(anna, ben)
+                List.of(Enrollment.builder().student(anna).grade(1.7).build(),
+                        Enrollment.builder().student(ben).grade(2.3).build())
         );
 
         Course deutschGrundkurs = new Course(
                 "C002",
                 "Deutsch – Stil & Ausdruck",
                 germanTeacher,
-                List.of(ben, clara)
+                List.of(Enrollment.builder().student(ben).grade(1.9).build(),
+                        Enrollment.builder().student(clara).grade(2.1).build())
         );
 
         Course englishLit = Course.builder()
                 .id("C002")
                 .name("English Literature")
                 .teacher(englishTeacher)
-                .students(List.of(ben, clara, david))
+                .enrollments(List.of(Enrollment.builder().student(ben).grade(2.5).build(),
+                        Enrollment.builder().student(clara).grade(1.8).build(),
+                        Enrollment.builder().student(david).grade(2.0).build()))
                 .build();
+
+        University university = new University("U001", "testUniversity", List.of(analysisI, deutschGrundkurs, englishLit));
 
         System.out.println("Kurse:");
         System.out.println(analysisI);
         System.out.println(deutschGrundkurs);
-        System.out.println(englishLit);
+        System.out.print(englishLit);
+        System.out.println();
+        System.out.println();
+
+        UniversityService service = new UniversityService();
+
+        System.out.println("Durchschnittsnoten pro Kurs:");
+        for (Course course : university.courses()) {
+            double avg = service.calculateCourseAverageGrade(course);
+            System.out.printf(" - %s: %.2f%n", course.getName(), avg);
+        }
+
+        double uniAvg = service.calculateUniversityAverageGrade(university);
+        System.out.printf("%nDurchschnittsnote der %s: %.2f%n", university.name(), uniAvg);
+
+        Set<Student> goodStudents = service.getGoodStudents(university);
+        System.out.println("\nStudierende mit Note ≤ 2.0:");
+        goodStudents.forEach(s ->
+                System.out.printf(" - %s (%s)%n", s.getName(), s.getId())
+        );
     }
 }
