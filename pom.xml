@@ -29,6 +29,7 @@
         <module>modules/03_ecosystem/04_streams</module>
         <module>modules/03_ecosystem/06_lombok</module>
         <module>modules/03_ecosystem/07_Exception</module>
+        <module>modules/03_ecosystem/08_date-time</module>
     </modules>
 
     <properties>
