@@ -13,7 +13,7 @@ class StudentServiceTest {
     void getStudentById_ThrowsException_WhenIdNotExists() {
         String missingId = UUID.randomUUID().toString();
 
-        StudentNotFoundException ex = assertThrows(StudentNotFoundException.class, () -> service.getStudentById(missingId));
+        assertThrows(StudentNotFoundException.class, () -> service.getStudentById(missingId));
     }
 
 }
