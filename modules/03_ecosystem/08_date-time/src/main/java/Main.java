@@ -27,5 +27,11 @@ public class Main {
         LocalDate d2 = LocalDate.of(2025, Month.JANUARY, 1);
         long daysBetween = ChronoUnit.DAYS.between(d1, d2);
         System.out.println(daysBetween);
+
+        Animal tobi = new Animal("Tobi", LocalDate.of(2023, 3, 13));
+
+        long days = tobi.daysUntilNextBirthday();
+        System.out.printf("Es sind noch %d Tage bis zum nächsten Geburtstag von %s.",
+                days, tobi.getName());
     }
 }
